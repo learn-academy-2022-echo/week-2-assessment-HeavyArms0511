@@ -6,7 +6,7 @@ Select the following as confirmation that the files in this repository are compl
 
 - [ ] Coding Challenges
 - [ ] Coding Concepts
-- [ ] Interview Questions
+- [X] Interview Questions
 
 ### 📝 Feedback
 
