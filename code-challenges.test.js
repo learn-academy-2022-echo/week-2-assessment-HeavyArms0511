@@ -97,14 +97,37 @@ const randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
 const randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction"]
 // Expected output: ["Temperature", "Database", "Chopsticks", "Mango", "Deduction"]
 
+describe("firstChar", () => {
+    it("takes each character value in the array and capitilizes only the first letter of the string", () => {
+        expect(firstChar(randomNouns1)).toEqual(["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"])
+        expect(firstChar(randomNouns2)).toEqual(["Temperature", "Database", "Chopsticks", "Mango", "Deduction"])
+    })
+})
+
+// FAIL  ./code-challenges.test.js
+// divThree
+//   ✓ determines if the number is divisible by 3 or not and tells you (2 ms)
+// firstChar
+//   ✕ takes each character value in the array and capitilizes only the first letter of the string (1 ms)
+
 
 // b) Create the function that makes the test pass.
 
+// Psuedo Code
+// Create a function and name it firstChar
+// Input: Take in the array and use built in methods to capitilize each value in the string
+// Output: To have the first letter of each string in the array only capitilized
+
+const firstChar = (array) =>{
+    return array.map(value => value[0].toUpperCase() + value.slice(1))
+}
 
 
 // --------------------3) Create a function that takes in a string and logs the index of the first vowel.
 
 // a) Create a test with expect statements for each of the variables provided.
+
+
 
 const vowelTester1 = "learn"
 // Expected output: 1
@@ -114,4 +137,34 @@ const vowelTester3 = "challenges"
 // Expected output: 2
 
 
+describe("vowelOnly", () => {
+    it("takes the string in the variable and determines where the first vowel is in the string and outputs the index", () => {
+        expect(vowelOnly(vowelTester1)).toEqual(1)
+        expect(vowelOnly(vowelTester2)).toEqual(0)
+        expect(vowelOnly(vowelTester3)).toEqual(2)
+    })
+})
+
+// vowelOnly
+// ✕ takes the string in the variable and determines where the first vowel is in the string and outputs the index
+
+// ● vowelOnly › takes the string in the variable and determines where the first vowel is in the string and outputs the index
+
+// ReferenceError: vowelOnly is not defined
+
+
 // b) Create the function that makes the test pass.
+
+
+// Psuedo Code
+// Create a function named vowelOnly
+// Input: take in the variables and run a method to determine where the first vowel is.
+// Output: Output the index of the first vowel in the string
+
+const vowelOnly = (string) => {
+    let vowels = ["a", "e", "i", "o", "u"]
+    for(i = 0; i < string.length; i++){
+        if(vowels.includes(string[i]))
+        return i
+    }
+}

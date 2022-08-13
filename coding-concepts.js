@@ -76,5 +76,5 @@ class Learn {
 const learnStudent = new Learn("George")
 console.log(learnStudent)
 
-// a) Your answer:I think it will output George echo and 2022 in an array
-// b) Verify and explain:Output: Learn { student: 'George', cohort: 'Echo', year: 2022 }.  You made a new var learnStudent which is the class Learn and since the parameter is name you had the arguement "George" so when you log it this.student = name now says: student = "George" since that was the arguement and the parameter for student was name which was defined above in constructor.
+// a) Your answer: I think it will output George echo and 2022 in an array
+// b) Verify and explain: Output: Learn { student: 'George', cohort: 'Echo', year: 2022 }.  You made a new var learnStudent which is the class Learn and since the parameter is name you had the arguement "George" so when you log it this.student = name now says: student = "George" since that was the arguement and the parameter for student was name which was defined above in constructor.
